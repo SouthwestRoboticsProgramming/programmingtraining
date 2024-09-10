@@ -1,0 +1,167 @@
+Symbols
+=========
+
+Structure:
+
+;  Semicolon: placed at the end of a line to indicate the end of a statement. Similar to periods
+              at the end of sentences.
+
+,  Comma: used to separate items in a list
+
+{ }  Braces: create sections of code
+  Variables defined within a pair of braces only exist within those braces
+  Statements (lines of code) can be placed inside.
+    They are run from top to bottom.
+
+.  Member access / "dot": accesses a member of an object
+  Example: `robot.intake` accesses the `intake` variable within the `robot` object
+
+" "  Double quotes: used to write a String literal
+  Example: "Hello, world!"
+
+' '  Single quotes: used to write a char literal
+  Example: 'A'
+  Incorrect: 'Abc'
+    This is incorrect because single quotes may only contain one character
+
+
+Basic arithmetic:
+
++  Addition
+  value + value
+
+-  Subtraction or negation
+  value - value  or  -value
+
+*  Multiplication
+  value * value
+
+/  Division
+  value / value
+
+%  Modulus: Calculates the remainder of dividing the left side by the right. Ex: 12 % 5 == 2
+  value % value
+
+( )  Parentheses: Allows grouping expressions, same as in math
+  (value)
+
+Arithmetic expressions follow the order of operations:
+1 + 2 * 3 == 1 + 6 == 7
+
+
+Variables:
+
+=  Assign
+   variable = value
+
++=  Add-assign
+   variable += value
+   Equivalent to variable = variable + value
+Same exists for the other arithmetic operators: -=, *=, /=, %=
+
+++  Increment
+   variable++
+   Equivalent to variable = variable + 1
+
+--  Decrement
+   variable--
+   Equivalent to variable = variable - 1
+
+
+Comparisons:
+
+==  Equal
+!=  Not equal
+>   Greater than
+<   Less than
+>=  Greater than or equal to
+<=  Less than or equal to
+   value > value
+
+
+Boolean operations:
+
+!   Not: true if the condition is false
+   !condition
+
+&&  And: true if both conditions are true
+||  Or:  true if either or both conditions are true
+   condition && condition
+   condition || condition
+
+
+Arrays:
+
+[ ]  Brackets: Used in many ways
+
+1. Defining an array type:
+type[]
+Example: `int[] myArray` is an array of integers
+
+2. Instantiating an array:
+type[length]
+Example: `myArray = new int[16]` creates a new array containing 16 integers
+
+3. Accessing an element of an array ("indexing"):
+array[index]
+Example: `myArray[3] = 42` sets the element at index 3 within the array to 42. This is actually
+the _fourth_ item in the list, since the first element is at index 0.
+
+{ }  Braces: Instantiating an array with values
+new type[] { value, value, value, ... }
+Example `myArray = new int[] {1, 2, 3, 4, 5}` creates an array of integers containing 1, 2, 3, 4, 5
+
+
+Advanced operators:
+===================
+You likely won't need to know these, but you may encounter them
+
+Ternary: Shorthand way of writing an if-statement that produces one result value
+  condition ? value1 : value2
+  Equivalent to:
+    if (condition) {
+      result = value1
+    } else {
+      result = value2
+    }
+
+
+Bit shifts:
+
+<<  Left shift: Shifts each bit of a number up by a number of places. This results in doubling the value
+                the specified number of times
+  value << places
+  Example: 16 << 2 == 16 * 2 * 2 == 64
+
+>>  Arithmetic right shift: Shifts each bit of a number down by a number of places. This results in halving
+                            the value the specified number of times
+  value >> places
+  Example: 16 >> 2 == 16 / 2 / 2 == 4
+
+>>>  Logical right shift: Shifts each bit of a number down by a number of places, including the sign bit from
+                          the value's twos complement representation. Equivalent to arithmetic right shift for
+			  positive values.
+  value >>> places
+
+These also have op-assign versions:
+<<=, >>=, >>>=
+
+
+Bitwise operators:
+Operate on each bit of a number in its binary representation individually
+
+&  Bitwise AND: For each bit, the resulting bit will be set if the corresponding bit in both
+                of the inputs is set
+  value & value
+
+|  Bitwise OR: For each bit, the resulting bit will be set if the corresponding bit in either
+               or both of the inputs is set
+  value | value
+
+^  Bitwise XOR: For each bit, the resulting bit will be set if the corresponding bit in either,
+                but _not_ both, of the inputs is set
+  value ^ value
+
+These also have op-assign versions:
+&=, |=, ^=
+
