@@ -89,6 +89,25 @@ Boolean operations:
    condition && condition
    condition || condition
 
+Methods:
+
+( )  Parentheses (again): Have two uses
+
+1. Calling a method
+method()
+method(value, value, ...)
+Example: `say(":3")` uses the `say` method and gives it the parameter ":3"
+
+2. Defining a method
+method()
+method(type value, type value, ...)
+Example:
+  void say(String text) {
+    System.out.println("I say " + text);
+  }
+  This defines a method named `say` that takes in one parameter named `text` that accepts values
+  of type `String`. The parameter is equivalent to a variable within the method body, which is the
+  code placed inside of the braces.
 
 Arrays:
 
